@@ -1,0 +1,59 @@
+Chuong Nguyen
+CS 468 
+Project 1
+
+How to compile and run: type in gcc filename -o filenameofyourchoosing
+
+Operation:
+
+// note: this was the explanations for the project when I did it with
+regular array techniques and before I switched to bit shifting. 
+
+FILE IO
+- put lines from crypt-17.txt in separate arrays so easier to print to output file
+and operate one
+- open filelist file and extract to array
+- check to see if its plain or crypt filename
+- open crypt-17 file and check third line to see if its decrypt or encrypt assign it to 
+a variable
+- get 7th line which is the entire crypttext which is the entire array
+- loop through crypttext array and put each 8 bit block into array
+- that array will act as the text that will be plug into the algorithm (along with the
+array saved earlier that acts as the key
+
+KEY GENERATION
+- permutation10 method: create a 10 space array with designated spacing values, loop
+through output array and assign relevant values that align with the spacing from
+the p10 array
+- ls1 method: run that output from permutation10 method and left shift that array by 
+one space to the left
+- permutation8 method: do the same thing as the p10 array but instead use designated
+8 space array. output will be your first key
+- ls2 method: use a bit shift circular left shit on the output from ls1 method
+- permutation8 method: run result of ls2 method into the earlier permutation8 method
+with same designated values for 8 space array. that result will be your 
+- permutation8 method: run result from ls2 array and that output will be your second key
+
+DECRYPTION/ENCRYPTION
+- initialP method: same method as the permutation8 method where output array corresponds
+to positional values in designated 8 space array
+- eparray method: ep array is used on a smaller 4 space array to expand it to 
+a larger array
+- xorKey1 method: output from eparray is used to xor bit by bit with the first key(if
+plain-text is the original input file) or second key(if crypt-text is the original file).
+we used that variable from the FILE IO section where we extract the scheme and assign it
+as a variable
+- s0Box method: that output from the last method, take the first 4 bits and run it through
+this method. created a multidimensional array with the designated values of the s0 box. 
+made a bunch of shorter arrays to hold the combos of 1st and 4th digits along with 2nd
+and 3rd digits in binary values. use those as inputs to loop through the s0 array
+- s1Box method: do the same thing as the s0Box method but use the last 4 bits of the array
+instead
+- permute4 method: take the two bit outputs from s0 and s1 methods and plug into this permutatoin
+array which acts in a similar way to the earlier p10 and permute8 methods in the key generation
+- xorFK1 method: we take the first four digits of the initialP method output and xor it with 
+the output from permute4 method. 
+- switchsw method: take the output from the xorFk1 method and switch the first four 
+positions with the last four positions from the output from the initialP method
+- run through the entire sequence of steps one more time to produce a character
+- print each character to appropriate line on output file 
