@@ -11,7 +11,7 @@ crypt-x.txt
 * Where x is an integer
 * Plain-x.txt contains plaintext
 * Crypt-x.txt contains encrypted text
-* Your outpubile just reverses the file name
+* Your output just reverses the file name
 – E.g., if you read crypt-6.txt, your output file is named plain-6.txt
 
 Operation
