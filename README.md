@@ -6,6 +6,8 @@ The encryption algorithm involves five functions: an initial permutation (IP); a
 a key input; a simple permutation function that switches (SW) the two halves of the data; the function fK again; and finally a permutation function that is the inverse of the initial permutation
 (IP^–1).
 
+![My image](http://s23.postimg.org/kony668uj/Screen_Shot_2015_12_02_at_9_21_03_PM.png)
+
 
 
 
