@@ -8,6 +8,12 @@ a key input; a simple permutation function that switches (SW) the two halves of 
 
 ![My image](http://s23.postimg.org/kony668uj/Screen_Shot_2015_12_02_at_9_21_03_PM.png)
 
+![My image](http://s12.postimg.org/iwzug4sst/Screen_Shot_2015_12_02_at_9_20_56_PM.png)
+
+![My image](http://s29.postimg.org/7t513eezr/Screen_Shot_2015_12_02_at_9_21_11_PM.png)
+
+
+
 
 
 
