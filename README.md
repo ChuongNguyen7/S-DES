@@ -1,5 +1,5 @@
 # S-DES
-Simplified DES encryption algorithm implemented in C
+DES encryption algorithm implemented in C
 
 Analysis of S-DES:
 http://mercury.webster.edu/aleshunas/COSC%205130/G-SDES.pdf
